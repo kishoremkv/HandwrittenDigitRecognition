@@ -34,7 +34,7 @@ app.get("/s2",function(req,res)
     dataToSend = data.toString();
     });
     python.stderr.on('data',(data)=>{
-        console.log(Uint8Array.toString(data));
+        console.log("The Error is "+data.toString());
     });
     // in close event we are sure that stream from child process is closed
     python.on('close', (code) => {
