@@ -1,0 +1,27 @@
+/* title  */
+.title
+{
+    background-color: rgb(224, 207, 55);
+    padding:2%;
+    text-align: center;
+    font-family:cursive;
+}
+
+.jumbotron,body
+{
+    /* margin: 10% 10%; */
+    background-color:rgb(137, 180, 236);
+}
+
+/* styling canvas */
+#can,#canvasimg
+{
+    /* text-align: center; */
+    margin-bottom:2%;
+}
+/* buttons */
+.buttons
+{
+    margin:2%;
+    margin-top:0;
+}
