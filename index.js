@@ -95,6 +95,9 @@ app.post('/canvas',(req, res) => {
     dataToSend = data.toString();
     console.log("Data got from python file:"+dataToSend);
     });
+    python.stderr.on('data',(data)=>{
+        console.log("The Error is "+data.toString());
+    });
     // in close event we are sure that stream from child process is closed
     python.on('close', (code) => {
     console.log(`child process close all stdio with code ${code}`);
