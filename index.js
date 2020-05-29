@@ -33,6 +33,9 @@ app.get("/s2",function(req,res)
     console.log('Pipe data from python script ...');
     dataToSend = data.toString();
     });
+    python.stderr.on('data',(data)=>{
+        console.log(uint8arrayToString(data));
+    });
     // in close event we are sure that stream from child process is closed
     python.on('close', (code) => {
     console.log(`child process close all stdio with code ${code}`);
