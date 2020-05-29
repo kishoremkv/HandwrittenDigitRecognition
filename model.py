@@ -10,7 +10,7 @@ import keras
 from keras.models import Model
 from keras.layers import *
 from keras import optimizers
-print("hello from python")
+# print("hello from python")
 def imageprepare(argv):
     """
     This function returns the pixel values.
