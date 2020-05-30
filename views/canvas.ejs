@@ -89,7 +89,8 @@ function save() {
     console.log(png);
     document.forms["myForm"]["myimage"].value=png;
     document.getElementById("canvasimg").src = dataURL;
-    document.getElementById("canvasimg").style.display = "inline";
+    //removing temparory image  
+    // document.getElementById("canvasimg").style.display = "inline";
     document.getElementById("resultimage").textContent="Sending image to server";
     document.getElementById("resultimage").style.display="inline";
 }
@@ -151,7 +152,9 @@ function findxy(res, e) {
             </div>
             <% if(dataToSend) { %>
             <em><h2 style="position:absolute;top:50%;left:37%">Predicted value: <%=dataToSend%></h2></em>
-                <script>alert("Predicted value:"+dataToSend)</script>
+                <!-- <script>alert("Predicted value:"+dataToSend)</script> -->
+            <img  widht = "" height="300" style="position:absolute;top:26%;left:65%;" alt ="image not loaded" src = "/uploads/MNIST_IMAGE.png">
+            <em><h3 style="position:absolute;top:80%;left:65%;">MNIST 28X28 Converted Image</h3></em>
             <% } %>   
         </div>
     </body>

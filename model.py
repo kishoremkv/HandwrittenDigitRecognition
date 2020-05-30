@@ -48,7 +48,7 @@ def imageprepare(argv):
     tva = [(255 - x) * 1.0 / 255.0 for x in tv]
         # print(tva)
     return tva
-x=[imageprepare('uploads/fromclient.png')]#file path here 
+x=[imageprepare('public/uploads/fromclient.png')]#file path here 
 # print(len(x))# mnist IMAGES are 28x28=784 pixels  
 # print(x[0])
 #Now we convert 784 sized 1d array to 24x24 sized 2d array so that we can visualize it
@@ -78,5 +78,5 @@ final_result =  np.argmax(y_pred, axis=1)
 #print("Predicted value:",final_result)
 print(final_result[0])
 plt.imshow(newArr, interpolation='nearest')
-plt.savefig('uploads/MNIST_IMAGE.png')#save MNIST image
+plt.savefig('public/uploads/MNIST_IMAGE.png')#save MNIST image
 #plt.show()#Show / plot that image

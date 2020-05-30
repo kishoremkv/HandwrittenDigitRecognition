@@ -5,6 +5,7 @@ var fs = require('fs');
 var {spawn}=require('child_process');
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/uploads"))
 const bodyParser = require('body-parser');
 const upload =  multer({dest: 'uploads/'});
 app.get("/s1",function(req,res)
@@ -82,7 +83,7 @@ app.post('/canvas',(req, res) => {
     console.log("on sendimage");
     const image=req.body.myimage;
     console.log(image);
-    fs.writeFile("uploads/fromclient.png", image,{encoding:'base64'}, function(err) 
+    fs.writeFile("public/uploads/fromclient.png", image,{encoding:'base64'}, function(err) 
     {
         console.log("image created!");
         console.log(err);
